@@ -101,8 +101,8 @@ Quy trình hoạt động như sau:
 
 * **Hậu quả:** 
 * Sửa `arr[0] = 99` thì `x` cũng thay đổi theo.
-* *Lợi:* Tiết kiệm RAM.
-* *Hại:* Dễ toang nếu lỡ tay sửa nhầm.
+* Ưu điểm: Tiết kiệm RAM.
+* Hạn chế: Dễ toang nếu lỡ tay sửa nhầm.
 
 ### 3. Sử dụng `torch.tensor()`
 
