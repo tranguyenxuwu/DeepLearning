@@ -66,17 +66,13 @@ Quy trình hoạt động như sau:
 * Dữ liệu được tạo theo quy luật `y = 3x + 5` .
 * Thêm nhiễu (noise) để dữ liệu không thẳng tắp tuyệt đối.
 
-
 2. **Khởi tạo:**
 * Cho khởi tạo ban đầu là:  `w=3, b=5`.
-
 
 3. **Học tập (Training Loop):**
 * **So sánh:** Máy tính dùng `w` và `b` hiện tại để đoán, rồi so với kết quả thật. Độ chênh lệch được gọi là **Loss**
 * **Sửa sai:** Dùng `backward()` để biết cần tăng/giảm `w` và `b` thế nào cho Loss bé đi.
 * **Lặp lại:** Sau 100 lần sửa, Loss giảm dần, nghĩa là máy đoán ngày càng chuẩn.
-
-
 
 ### Nhận xét kết quả:
 
@@ -87,6 +83,33 @@ Quy trình hoạt động như sau:
 Vì dữ liệu có **nhiễu**. Máy tính cố gắng tìm đường thẳng trung bình đi qua mớ dữ liệu hỗn loạn, nên nó không thể khớp chính xác 100% với công thức gốc, mà chỉ tìm ra xấp xỉ tốt nhất.
 
 ## BTVN 04
+Bài này minh họa cạm bẫy kinh điển khi chuyển dữ liệu giữa **Numpy** và **PyTorch**: Vấn đề **Dùng chung bộ nhớ** vs **Sao chép**.
+
+Quy trình hoạt động như sau:
+
+### 1. Tự động phát hiện kiểu dữ liệu
+
+* **Nguyên tắc:** PyTorch cố gắng bê nguyên xi kiểu dữ liệu của Numpy sang để đỡ phải convert.
+* `arr` là `int64`  Tensor ra `LongTensor` (`int64`).
+* `arr2` là `int32`  Tensor ra `IntTensor` (`int32`).
+
+### 2. Dùng chung bộ nhớ với `from_numpy`
+
+* **Code:** `x = torch.from_numpy(arr)`
+* **Cơ chế:** "Chia sẻ vùng nhớ".
+* PyTorch không tạo data mới, mà trỏ thẳng vào vùng nhớ của Numpy.
+
+* **Hậu quả:** 
+* Sửa `arr[0] = 99` thì `x` cũng thay đổi theo.
+* *Lợi:* Tiết kiệm RAM.
+* *Hại:* Dễ toang nếu lỡ tay sửa nhầm.
+
+### 3. Sử dụng `torch.tensor()`
+
+* **Code:** `tensor = torch.tensor(arr3)`
+* **Cơ chế:** "Photo công chứng".
+* PyTorch xin cấp phát bộ nhớ mới, copy dữ liệu từ Numpy sang, rồi đóng gói lại.
+
 
 ## BTVN 05
 
