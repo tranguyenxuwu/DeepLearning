@@ -1,12 +1,12 @@
 ## BTVN 01
 
-Đây là bài toán **Mô phỏng Logic Trò chơi (Game Logic)**. Thay vì chỉ nhập xuất dữ liệu đơn thuần, chúng ta xây dựng một "trọng tài ảo" để quản lý luật chơi.
+Đây là bài toán **Mô phỏng Logic game cờ caro 3x4**. Thay vì chỉ nhập xuất dữ liệu đơn thuần, ta xây dựng một trọng tài ảo để quản lý luật chơi.
 
 Quy trình hoạt động như sau:
 
 1. **Khởi tạo sân đấu:**
-* Tạo ma trận 3x4 toàn số `99`. Hãy tưởng tượng `99` là "ghế trống", chưa ai ngồi.
-* `x` và `o` sẽ là hai phe tranh giành các ghế này.
+* Tạo ma trận 3x4 toàn số `99`. Tưởng tượng `99` là ô trống, chưa ai ngồi.
+* `x` và `o` là hai phe tranh giành các ô này.
 
 2. **Vòng lặp Game:**
 * **Luân phiên:** Dùng biến đếm hoặc cờ để xác định lượt này là của `x` hay `o`.
@@ -23,7 +23,7 @@ Quy trình hoạt động như sau:
 
 ## BTVN 02
 
-Bài này minh họa kỹ thuật **Truy xuất dữ liệu** trong mảng 2 chiều. Đây là kỹ năng "dao kéo" cơ bản để cắt lấy phần thịt ngon nhất của dữ liệu.
+Bài này minh họa kỹ thuật **Truy xuất dữ liệu** trong mảng 2 chiều. Để cắt lấy phần dữ liệu cần thiết.
 
 Quy trình hoạt động như sau:
 
