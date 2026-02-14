@@ -1,8 +1,4 @@
-## BTVN 02
-
-Đây là bài tập thí nghiệm với **Mạng Nơ-ron Nhân tạo (ANN)**. Mục tiêu là xoay vòng thay đổi cấu trúc mạng, hàm mất mát, và bộ tối ưu để quan sát ảnh hưởng đến hiệu suất.
-
-Dữ liệu gốc từ lab ANN (`./4/ANN-LAB.ipynb`): 300 điểm chia thành vòng tròn (lớp 0) và vành đai (lớp 1), 80% train / 20% test.
+## Bài tập LAB ANN
 
 ### Phần 1: Thay đổi cấu trúc ANN
 
