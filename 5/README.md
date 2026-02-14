@@ -11,8 +11,9 @@ Quy trình hoạt động như sau:
 
 2. **Xây dựng mô hình:**
     *   Thiết kế một mạng ANN đơn giản.
-    *   Tưởng tượng việc trải phẳng một bức ảnh 2 chiều (28x28) thành một sợi dây dài ngoằng (784 pixel). Đây là bước đầu vào bắt buộc cho các mạng Linear truyền thống.
-    *   **Lớp ẩn:** Nơi mạng "suy ngẫm". Số lượng nút (neurons) ở đây càng nhiều thì mạng càng "thông minh" (nhưng coi chừng học vẹt - overfitting).
+    *   Trải phẳng một bức ảnh 2 chiều (28x28) thành một canvas (784 pixel). 
+    *   Đây là bước đầu vào bắt buộc cho các mạng Linear.
+    *   **Lớp ẩn:** Nơi mạng học. Số lượng nút (neurons) ở đây càng nhiều thì mạng càng "học" được nhiều (nhưng có thể bị overfitting).
     *   **Đầu ra:** 10 nút, mỗi nút đại diện cho xác suất của một con số (0, 1, ..., 9).
 
 3. **Training:**
