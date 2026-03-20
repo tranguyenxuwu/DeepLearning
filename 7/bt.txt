@@ -1,0 +1,11 @@
+dựa trên các bài của tuần trước (CNN), đổi thành các tập dữ liệu
+- Cat & Dog
+- CIFAR 10
+- PlantVillage
+
+xử lý mất cân bằng, phân tích dữ liệu
+thay đổi tham số sao cho tối ưu về độ chính xác >90%
+
+không sử dụng pretrain (ResNet, ConNext-tiny, YOLO...)
+
+DL: 21/03/2026
